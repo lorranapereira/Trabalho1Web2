@@ -39,19 +39,19 @@ function insertDatabaseData() {
     DELETE FROM sqlite_sequence WHERE name='emails';
     DELETE FROM sqlite_sequence WHERE name='phones';
     DELETE FROM sqlite_sequence WHERE name='users';
+    INSERT INTO users (name, cpf, type) VALUES ('Ana Souza', '32165498700', 'ADMIN');
+    INSERT INTO emails (user_id, email, is_primary) VALUES (1, 'ana.souza@email.com', 1);
+    INSERT INTO phones (user_id, phone, is_primary) VALUES (1, '54987654321', 1);
+    
+    INSERT INTO users (name, cpf, type) VALUES ('Pedro Lima', '78912345600', 'CLIENT');
+    INSERT INTO emails (user_id, email, is_primary) VALUES (2, 'pedro.lima@email.com', 1);
+    INSERT INTO phones (user_id, phone, is_primary) VALUES (2, '54912345678', 1);
+    
+    INSERT INTO users (name, cpf, type) VALUES ('Juliana Costa', '65432178900', 'CLIENT');
+    INSERT INTO emails (user_id, email, is_primary) VALUES (3, 'juliana.costa@email.com', 1);
+    INSERT INTO emails (user_id, email, is_primary) VALUES (3, 'juliana.costa@outlook.com', 0);
+    INSERT INTO phones (user_id, phone, is_primary) VALUES (3, '54998765432', 1);
 
-    INSERT INTO users (name, cpf, type) VALUES ('João Silva', '12345678900', 'ADMIN');
-    INSERT INTO emails (user_id, email, is_primary) VALUES (1, 'joao.silva@email.com', 1);
-    INSERT INTO phones (user_id, phone, is_primary) VALUES (1, '53987654321', 1);
-
-    INSERT INTO users (name, cpf, type) VALUES ('Maria Oliveira', '98765432100', 'CLIENT');
-    INSERT INTO emails (user_id, email, is_primary) VALUES (2, 'maria.oliveira@email.com', 1);
-    INSERT INTO phones (user_id, phone, is_primary) VALUES (2, '53912345678', 1);
-
-    INSERT INTO users (name, cpf, type) VALUES ('Carlos Pereira', '45678912300', 'CLIENT');
-    INSERT INTO emails (user_id, email, is_primary) VALUES (3, 'carlos.pereira@email.com', 1);
-    INSERT INTO emails (user_id, email, is_primary) VALUES (3, 'carlos.pereira@gmail.com', 0);
-    INSERT INTO phones (user_id, phone, is_primary) VALUES (3, '53998765432', 1);
   `);
 }
 
